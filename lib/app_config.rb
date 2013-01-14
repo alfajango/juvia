@@ -73,7 +73,8 @@ module AppConfig
       Rails.extend(AppConfig::RailsExtensions)
       
       config_file = "#{app.root}/config/application.yml"
-      config = YAML.load_file(config_file)
+      file = ERB.new( File.read(config_file) ).result
+      config = YAML::load(file)
       
       if !config[Rails.env]
         abort "#{config_file} must contain configuration for the '#{Rails.env}' environment."
