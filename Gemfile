@@ -7,7 +7,7 @@ gem 'rails', '3.1.10'
 
 gem 'schema_plus'
 gem 'default_value_for'
-gem 'bluecloth'
+gem 'github-markdown', :require => 'github/markdown'
 gem 'devise'
 gem 'jquery-rails', '>= 1.0.12'
 gem 'will_paginate', '~> 3.0.pre4'

@@ -32,7 +32,6 @@ GEM
     addressable (2.2.6)
     arel (2.2.3)
     bcrypt-ruby (3.0.1)
-    bluecloth (2.2.0)
     builder (3.0.4)
     cancan (1.6.7)
     capybara (1.1.2)
@@ -76,6 +75,7 @@ GEM
       factory_girl (~> 2.3.0)
       railties (>= 3.0.0)
     ffi (1.0.11)
+    github-markdown (0.5.3)
     guard (0.10.0)
       ffi (>= 0.5.0)
       thor (~> 0.14.6)
@@ -190,7 +190,6 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby
-  bluecloth
   cancan
   capybara
   capybara-webkit
@@ -200,6 +199,7 @@ DEPENDENCIES
   default_value_for
   devise
   factory_girl_rails
+  github-markdown
   guard-livereload
   inherited_resources
   jquery-rails (>= 1.0.12)
