@@ -56,7 +56,9 @@ module Juvia
 
     # Enable the asset pipeline
     config.assets.enabled = true
-    
+
+    config.assets.initialize_on_precompile = false
+
     initializer "application action_mailer settings", :after => "app_config" do
       uri = URI.parse(config.base_url)
       config.action_mailer.default_url_options = { :host => uri.host }
