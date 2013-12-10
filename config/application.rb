@@ -70,6 +70,11 @@ module Juvia
       end
 
       config.action_mailer.delivery_method = config.email_method.to_sym
+      if config.action_mailer.delivery_method == :smtp
+        smtp_settings = config.smtp_settings
+        smtp_settings = smtp_settings.marshal_dump if smtp_settings.is_a? OpenStruct
+        ActionMailer::Base.smtp_settings = smtp_settings
+      end
     end
   end
 end
